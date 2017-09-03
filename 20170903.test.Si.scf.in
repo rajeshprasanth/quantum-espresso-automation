@@ -1,0 +1,42 @@
+&CONTROL
+  calculation='vc-relax'
+  outdir='.',
+  prefix='calc',
+  pseudo_dir='./'
+  verbosity='high',
+  tstress=.true.,
+  tprnfor=.true.,
+/
+
+&SYSTEM
+  ibrav=2,
+  celldm(1)=10.2623466921d0,
+  nat=2,
+  ntyp=1,
+  ecutwfc=60.0d0,
+  ecutrho=120.0d0,
+  occupations='smearing',
+  smearing='gaussian',
+  degauss=0.002000d0,
+/
+
+&ELECTRONS
+  diagonalization='david',
+  conv_thr=1d-06,
+  mixing_mode='plain',
+  mixing_beta=0.700d0,
+/
+&IONS
+/
+&CELL
+/
+
+ATOMIC_SPECIES
+  Si 28.085500d0 Si.pz-vbc.UPF
+
+ATOMIC_POSITIONS {alat}
+  Si   0.0000000000d0   0.0000000000d0   0.0000000000d0
+  Si   0.2500000000d0   0.2500000000d0   0.2500000000d0
+
+K_POINTS {automatic}
+  10 10 10 0 0 0
