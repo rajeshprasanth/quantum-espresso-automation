@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #
 #Sun Aug 27 09:20:48 IST 2017
-
+# try  awk '/Begin final coordinates/,/End final coordinates/' *vcrelax.out
 #-------------------------------------------------
 #
 #
